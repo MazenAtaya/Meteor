@@ -1,0 +1,27 @@
+<head>
+  <title>my_first_app</title>
+</head>
+
+<body>
+<div class="container">
+  <header>
+      <h1>Tags</h1>
+
+      <form class="new-tag">
+        <input type="text" name="name" placeholder="Type to add new tags" />
+      </form>
+  </header>
+
+  <ul>
+    {{#each tags}}
+      {{> tag}}
+    {{/each}}
+  </ul>
+</div>
+</body>
+
+
+
+<template name="tag">
+  <li> {{name}} </li>
+</template>
